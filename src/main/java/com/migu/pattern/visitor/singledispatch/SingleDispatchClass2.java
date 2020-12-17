@@ -6,7 +6,7 @@ package com.migu.pattern.visitor.singledispatch;
  * @desc TODO: add description here
  **/
 public class SingleDispatchClass2 {
-  public void polymorphismFunction(ParentClass p) {
+  public void overrideFunction(ParentClass p) {
     p.f();
   }
 

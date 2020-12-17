@@ -11,12 +11,12 @@ public class Compressor {
     System.out.println("Compress PPT.");
   }
 
-  public void compress(PdfFile pdfFile) {
+  public void compress(PdfFile pdfFile) { //Overload
     //...
     System.out.println("Compress PDF.");
   }
 
-  public void compress(WordFile wordFile) {
+  public void compress(WordFile wordFile) { //Overload
     //...
     System.out.println("Compress WORD.");
   }

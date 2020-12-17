@@ -5,6 +5,6 @@ public abstract class ResourceFile {
   public ResourceFile(String filePath) {
     this.filePath = filePath;
   }
-  abstract public void accept(Extractor extractor);
+  abstract public void accept(Extractor extractor); //Override
   abstract public void accept(Compressor extractor);
 }

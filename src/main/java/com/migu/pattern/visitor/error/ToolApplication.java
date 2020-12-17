@@ -17,7 +17,7 @@ public class ToolApplication {
     Extractor extractor = new Extractor();
     List<ResourceFile> resourceFiles = listAllResourceFiles(args[0]);
     for (ResourceFile resourceFile : resourceFiles) {
-      // extractor.extract2txt(resourceFile); // 会报编译错误
+      //extractor.extract2txt(resourceFile); // 会报编译错误
     }
   }
 
