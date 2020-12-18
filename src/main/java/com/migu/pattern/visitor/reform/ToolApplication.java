@@ -14,15 +14,18 @@ public class ToolApplication {
   }
 
   public static void main(String[] args) {
-    Extractor extractor = new Extractor();
-    List<ResourceFile> resourceFiles = listAllResourceFiles(args[0]);
+    // Extractor extractor = new Extractor();
+    Visitor extractor = new Extractor();
+    List<ResourceFile> resourceFiles = listAllResourceFiles("/tmp/resources");
     for (ResourceFile resourceFile : resourceFiles) {
-      resourceFile.accept(extractor);
+      resourceFile.accept(extractor); // 调用 ResourceFile 接口实现类的 accept(Visitor) 方法
+                                      // 具体哪个 ResourceFile 接口实现类，由 resourceFile 实际运行时类型确定
     }
 
     Compressor compressor = new Compressor();
     for(ResourceFile resourceFile : resourceFiles) {
-      resourceFile.accept(compressor);
+      resourceFile.accept(compressor); // 调用 ResourceFile 接口实现类的 accept(Compressor) 方法
+                                       // 具体哪个 ResourceFile 接口实现类，由 resourceFile 实际运行时类型确定
     }
   }
 }

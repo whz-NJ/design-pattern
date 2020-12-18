@@ -12,13 +12,13 @@ public class PPTFile extends ResourceFile {
 
   @Override
   public void accept(Extractor extractor) {
-    extractor.extract2txt(this); // 这里编译期就可以确定调用的是
+    extractor.extract2txt(this); // 这里编译期就可以确定调用的是 Extractor 类中
                                          // 入参类型为 PPTFile 的extract2txt 方法
   }
   @Override
   public void accept(Compressor extractor) {
-    extractor.compress(this); // 这里编译期就可以确定调用的是
-    // 入参类型为 PPTFile 的extract2txt 方法
+    extractor.compress(this); // 这里编译期就可以确定调用的是 Compressor 类中
+                                      // 入参类型为 PPTFile 的 extract2txt 方法
   }
   //...
 }
